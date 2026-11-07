@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar') %>
+
+    <p> appointment details </p>
+    <p><%= appointment.doctorName.username %></p>
+    <p><%= appointment.department %></p>
+    <p><%= appointment.startTime %></p>
+    <form action="/appointment/<%=appointment._id%>?_method=DELETE" method="post">
+        <button>Delete appointment</button>
+    </form>
+    <a href="/edit/<%=appointment._id%>">edit your appointment</a>
+</body>
+
+</html>
